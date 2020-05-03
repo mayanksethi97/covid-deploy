@@ -1,0 +1,26 @@
+<div style="text-align:center;">
+    <h1>View Products</h1>
+    <div class="table-responsive">
+        <table class="table" style="border:5px solid rgba(220,230,242,1)">
+            <tr style="background-color:rgba(220,230,242,1); font-size:12pt">
+                <th style="text-align:center">Product Id</th>
+                <th style="text-align:center">Product Name</th>
+                <th style="text-align:center">Category Id</th>
+                <th style="text-align:center">Price</th>
+                <th style="text-align:center">Quantity Available</th>
+                <th style="text-align:center">Action</th>
+           <tr *ngFor="let product of products" style="background-color:white">
+        <td>{{product.ProductId }}</td>
+        <td>{{product.ProductName}}</td>
+        <td>{{product.CategoryId}}</td>
+        <td>{{product.Price}}</td>
+        <td>{{product.QuantityAvailable}}</td>
+        <td><button title="Add to cart">Add to Cart</button></td>
+      </tr>
+        </table>
+
+    </div>
+    <div *ngIf="showDivMsg" style="">
+        <h4 class="jumbotron" style="text-align:center;">No products available</h4>
+    </div>
+</div>

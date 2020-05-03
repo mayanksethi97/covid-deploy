@@ -1,0 +1,59 @@
+<app-commonlayout></app-commonlayout>
+<body style="background-color: #f2f6f7;">
+<br>
+  <div>
+
+  </div>
+  <div class="row">
+  <div class="column">
+    <div class="card" >
+
+      <h2>{{totalConfirmed+"+"}}</h2>
+      <p>TOTAL CONFIRMED CASES</p>
+    </div>
+  </div>
+
+  <div class="column" >
+    <div class="card" style="background-color: #9c0909;">
+
+      <h2>{{totaldeath+"+"}}</h2>
+      <p>TOTAL DEATHS</p>
+    </div>
+  </div>
+
+  <div class="column" >
+    <div class="card" style="background-color: #0c9909;">
+
+      <h2>{{totalrecovered+"+"}}</h2>
+      <p>TOTAL RECOVERED</p>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+
+      <h2>{{todayConfirmed+"+"}}</h2>
+      <p>TOTAL CASES YESTERDAY</p>
+    </div>
+  </div>
+</div>
+<br><BR>
+  <h2 style="text-align: center;">TIMELINE OF COVID-19 IN INDIA</h2>
+  <BR><BR>
+  <app-showgraph></app-showgraph>
+
+  <div class="container-fluid" style="width:450px;height:100px;box-align: center;">
+
+<span>
+  <button class="btn"(click)="renderView()">VIEW TOTAL DATA</button>
+
+  <button class="btn"(click)="renderStateView()">CASES IN MY AREA</button>
+</span>
+
+</div>
+<div class = "container-fluid" style="box-align: center;width:550px;height:100px">
+   <button (click)="renderResourceView() " type="button" class="btn btn-primary btn-block" style="background-color: blue; font-family: Verdana, Geneva, Tahoma, sans-serif;">ESSENTIAL RESOURCES INFO</button>
+</div>
+
+
+  </body>

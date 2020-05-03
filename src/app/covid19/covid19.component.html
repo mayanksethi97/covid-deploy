@@ -1,0 +1,56 @@
+<app-commonlayout></app-commonlayout>
+
+<body>
+<div>
+<div class="table-responsive" style="box-align: center;">
+        <table class="table" style="border:5px solid rgba(220,230,242,1);">
+            <tr style="background-color:rgba(220,230,242,1); font-size:12pt">
+                <th style="text-align:center;color:white;">CONFIRMED</th>
+                <th style="text-align:center ;color:white;">DECEASED</th>
+                <th style="text-align:center ;color:white;">RECOVERED</th>
+                <th style="text-align:center ;color:white;">DATE</th>
+                <th style="text-align:center ;color:white;">TOTAL CONFIRMED</th>
+
+            </tr>
+            <tr *ngFor="let product of myData['cases_time_series']" style="background-color:black;text-align:center;color:white;">
+                <td> {{product.dailyconfirmed }} </td>
+                <td> {{product.dailydeceased}} </td>
+                <td> {{product.dailyrecovered}} </td>
+                <td> {{product.date}} </td>
+                <td> {{product.totalconfirmed}} </td>
+
+            </tr>
+        </table>
+    </div>
+
+    <div class="table-responsive">
+        <table class="table" style="border:5px solid background-color:#ff3333;">
+            <tr style="background-color:#ff3333; font-size:12pt">
+                <th style="text-align:center;">STATE</th>
+                <th style="text-align:center;">DATE & TIME</th>
+                <th style="text-align:center;">ACTIVE</th>
+                <th style="text-align:center;">CONFIRMED</th>
+                <th style="text-align:center;">DEATHS</th>
+                <th style="text-align:center;">RECOVERED</th>
+
+                <th style="text-align:center;">STATE NOTES</th>
+
+            </tr>
+            <tr *ngFor="let product of myData['statewise']" style="background-color:white;text-align:center;">
+                <td> {{product.state}} </td>
+                <td> {{product.lastupdatedtime}} </td>
+                <td> {{product.active }} </td>
+                <td> {{product.confirmed}} </td>
+                <td> {{product.deaths}} </td>
+                <td> {{product.recovered}} </td>
+
+                <td> {{product.statenotes}} </td>
+
+            </tr>
+        </table>
+    </div>
+
+</div>
+
+
+</body>
